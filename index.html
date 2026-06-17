@@ -40,12 +40,15 @@
         <section>
             <h3>Laisser un commentaire</h3>
             <form action="">
-                <label for="">Votre nom</label>
-                <input type="text" placeholder="Ex : Léa" required>
+                <label for="name">Votre nom</label>
+                <input type="text" id="name" name="name" placeholder="Ex : Léa" required>
                 <small>Minimum 2 caractères</small>
-                <label for="">Votre commentaire</label>
-                <input type="text" placeholder="Votre avis sur la recette..." required>
+
+                <label for="comment">Votre commentaire</label>
+                <input type="text" id="comment" name="comment" placeholder="Votre avis sur la recette..." required>
                 <small>Minimum 10 caractères</small>
+
+                <button type="submit">Publier</button>
             </form>
 
             <h3>Commentaires</h3>
