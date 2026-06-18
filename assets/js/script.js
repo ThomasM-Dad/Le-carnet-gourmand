@@ -2,8 +2,8 @@
 const form = document.querySelector('form');
 const nameInput = document.querySelector('#name');
 const commentInput = document.querySelector('#comment');
-const commentList = document.querySelector('#comments__list');
-const errorMessage = document.querySelector('#form__error');
+const commentList = document.querySelector('#comments-list');
+const errorMessage = document.querySelector('#form-error');
 
 // Gestion de la soumission du formulaire
 form.addEventListener('submit', function (event) {
@@ -25,13 +25,13 @@ form.addEventListener('submit', function (event) {
     // Si une règle n'est pas respectée : on affiche l'erreur et on arrête
     if (errors.length > 0) {
         errorMessage.textContent = errors.join(' ');
-        errorMessage.classList.add('form__error--visible')
+        errorMessage.classList.add('comments__error--visible')
         return;
     }
 
     // Le formulaire est valide : on efface une éventuelle erreur précédente
     errorMessage.textContent = '';
-    errorMessage.classList.remove('form__error--visible');
+    errorMessage.classList.remove('comments__error--visible');
 
     addComment(nameValue, commentValue);
 

@@ -18,12 +18,12 @@ header {
     margin: 0 0 20px;
 }
 
-.header__text {
+header div {
     display: flex;
     flex-direction: column;
 }
 
-.header__text h1 {
+h1 {
     margin: 0;
 }
 
@@ -35,20 +35,20 @@ main {
 }
 
 .container,
-.recipe,
+.container__recipe,
 .comments,
 .comment__item {
     padding: 14px;
 }
 
 .container,
-.recipe,
+.container__recipe,
 .comments,
 input,
 textarea,
 button,
 .comment__item,
-.form__error--visible {
+.comments__error--visible {
     border-radius: 12px;
     border: 1px solid #e5e7eb;
 }
@@ -58,7 +58,7 @@ button,
     background-color: #fafafa;
 }
 
-.recipe {
+.container__recipe {
     background-color: #f6f7fb;
 }
 
@@ -104,13 +104,13 @@ button {
     cursor: pointer;
 }
 
-.form__error {
+.comments__error {
     color: #dc2626;
     font-weight: bold;
     margin: 10px 0 0;
 }
 
-.form__error--visible {
+.comments__error--visible {
     background-color: #fee2e2;
     padding: 10px 14px;
 }
@@ -151,6 +151,7 @@ footer {
     margin: 20px;
 }
 
+/* BREAKPOINT 900px */
 @media (max-width: 900px) {
     main {
         flex-direction: column;
