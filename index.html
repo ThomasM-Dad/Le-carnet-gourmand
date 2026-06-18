@@ -43,29 +43,33 @@
             </div>
         </div>
 
-        <section class="comments">
-            <h3>Laisser un commentaire</h3>
-            <form action="">
-                <label for="name">Votre nom</label>
-                <input type="text" id="name" name="name" placeholder="Ex : Léa" required>
-                <small>Minimum 2 caractères</small>
+        <div class="comments">
+            <section>
+                <h3>Laisser un commentaire</h3>
+                <form action="">
+                    <label for="name">Votre nom</label>
+                    <input type="text" id="name" name="name" placeholder="Ex : Léa" required>
+                    <small>Minimum 2 caractères</small>
 
-                <label for="comment">Votre commentaire</label>
-                <textarea type="text" id="comment" name="comment" placeholder="Votre avis sur la recette" required></textarea>
-                <small>Minimum 10 caractères</small>
+                    <label for="comment">Votre commentaire</label>
+                    <textarea type="text" id="comment" name="comment" placeholder="Votre avis sur la recette" required></textarea>
+                    <small>Minimum 10 caractères</small>
 
-                <button type="submit">Publier</button>
-            </form>
+                    <button type="submit" class="comments__publish">Publier</button>
+                    <p id="form__error" class="form__error"></p>
+                </form>
+            </section>
 
-            <h3>Commentaires</h3>
-
-            <!-- Espace Commentaire -->
-        </section>
+            <section id="comments__list">
+                <h3>Commentaires</h3>
+                <!-- Espace Commentaire en JS -->
+            </section>
+        </div>
     </main>
 
     <footer>
         <p>Devoir JavaScript -- Frontend</p>
     </footer>
-    
+    <script src="/assets/js/script.js"></script>
 </body>
 </html>

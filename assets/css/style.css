@@ -36,10 +36,21 @@ main {
 
 .container,
 .recipe,
-.comments {
+.comments,
+.comment__item {
+    padding: 14px;
+}
+
+.container,
+.recipe,
+.comments,
+input,
+textarea,
+button,
+.comment__item,
+.form__error--visible {
     border-radius: 12px;
     border: 1px solid #e5e7eb;
-    padding: 14px;
 }
 
 .container {
@@ -85,17 +96,62 @@ form small {
     margin: 20px 0;
 }
 
-input,
-textarea,
 button {
-    border-radius: 12px;
-    border: 1px solid #e5e7eb;
-}
-
-button {
+    box-sizing: border-box;
     padding: 10px 14px;
     background-color: #2563eb;
     color: #ffffff;
+}
+
+/* Message d'erreur du formulaire */
+.form__error {
+    color: #dc2626;
+    font-weight: bold;
+    margin: 10px 0 0;
+}
+
+.form__error--visible {
+    background-color: #fee2e2;
+    padding: 10px 14px;
+}
+
+/* Conteneur de la liste des commentaires */
+.comments__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+/* Chaque commentaire individuel */
+.comment__item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.comment__author {
+    margin: 0;
+}
+
+.comment__text {
+    margin: 0;
+}
+
+.comment__delete {
+    background: none;
+    border: none;
+    color: #dc2626;
+    font-weight: bold;
+    padding: 0;
+    align-self: flex-start;
+    cursor: pointer;
+}
+
+.comment__delete:hover {
+    text-decoration: underline;
 }
 
 footer {
