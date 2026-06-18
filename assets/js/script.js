@@ -40,7 +40,7 @@ form.addEventListener('submit', function (event) {
 
 // Création et ajout d'un commentaire
 function addComment(author, text) {
-    const commentItem = document.createElement('div');
+    const commentItem = document.createElement('li');
     commentItem.classList.add('comments__item');
 
     const authorElement = document.createElement('h4');

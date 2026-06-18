@@ -114,6 +114,10 @@ button {
     cursor: pointer;
 }
 
+#comments-list {
+    padding: 0;
+}
+
 .comments__error {
     color: #dc2626;
     font-weight: bold;
