@@ -41,19 +41,19 @@ form.addEventListener('submit', function (event) {
 // Création et ajout d'un commentaire
 function addComment(author, text) {
     const commentItem = document.createElement('div');
-    commentItem.classList.add('comment__item');
+    commentItem.classList.add('comments__item');
 
     const authorElement = document.createElement('h4');
-    authorElement.classList.add('comment__author');
+    authorElement.classList.add('comments__author');
     authorElement.textContent = author;
 
     const textElement = document.createElement('p');
-    textElement.classList.add('comment__text');
+    textElement.classList.add('comments__text');
     textElement.textContent = text;
 
     const deleteButton = document.createElement('button');
     deleteButton.type = 'button';
-    deleteButton.classList.add('comment__delete');
+    deleteButton.classList.add('comments__delete');
     deleteButton.textContent = '🗑️ Supprimer';
 
     // Suppression du commentaire sans recharger la page
