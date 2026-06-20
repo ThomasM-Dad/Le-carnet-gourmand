@@ -55,7 +55,6 @@ main {
     gap: 32px;
 }
 
-.container,
 .container__recipe,
 .comments,
 .comments__item {
@@ -76,6 +75,7 @@ button,
 }
 
 .container {
+    padding: 16px;
     flex: 2;
     background-color: #fafafa;
 }
@@ -130,7 +130,10 @@ button {
 }
 
 #comments-list {
+    display: flex;
+    flex-direction: column;
     padding: 0;
+    gap: 12px;
 }
 
 .comments__error {
@@ -148,7 +151,6 @@ button {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    margin-bottom: 10px;
     background-color: #ffffff;
 }
 
