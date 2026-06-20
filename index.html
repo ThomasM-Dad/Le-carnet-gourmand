@@ -8,7 +8,11 @@
 </head>
 <body>
     <header>
-        <div class="header__text">
+        <div class="header__logo">
+            <!-- Logo différent que celui demandé par le devoir (Voir README) -->
+            <img src="/assets/img/salade.png" alt="Logo du Carnet Gourmand">
+        </div>
+        <div class="header__titles">
             <h1>Le Carnet Gourmand</h1>
             <span>Avis des lecteurs</span>
         </div>
@@ -21,7 +25,7 @@
                 <p>Laissez votre avis sur cette recette grâce au formulaire ci-contre.</p>
             </section>
 
-            <div class="recipe">
+            <div class="container__recipe">
                 <section>
                     <h3>Ingrédients</h3>
                     <ul>
@@ -52,17 +56,19 @@
                     <small>Minimum 2 caractères</small>
 
                     <label for="comment">Votre commentaire</label>
-                    <textarea id="comment" name="comment" placeholder="Votre avis sur la recette" required></textarea>
+                    <textarea id="comment" name="comment" placeholder="Votre avis sur la recette..." required></textarea>
                     <small>Minimum 10 caractères</small>
 
                     <button type="submit" class="comments__publish">Publier</button>
-                    <p id="form__error" class="form__error"></p>
+                    <p id="form-error" class="comments__error"></p>
                 </form>
             </section>
 
-            <section id="comments__list">
+            <section>
                 <h3>Commentaires</h3>
-                <!-- Espace Commentaire en JS -->
+                <ul id="comments-list">
+                    <!-- Espace Commentaire en JS -->
+                </ul>
             </section>
         </div>
     </main>

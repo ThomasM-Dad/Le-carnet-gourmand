@@ -2,8 +2,8 @@
 const form = document.querySelector('form');
 const nameInput = document.querySelector('#name');
 const commentInput = document.querySelector('#comment');
-const commentList = document.querySelector('#comments__list');
-const errorMessage = document.querySelector('#form__error');
+const commentList = document.querySelector('#comments-list');
+const errorMessage = document.querySelector('#form-error');
 
 // Gestion de la soumission du formulaire
 form.addEventListener('submit', function (event) {
@@ -25,13 +25,13 @@ form.addEventListener('submit', function (event) {
     // Si une règle n'est pas respectée : on affiche l'erreur et on arrête
     if (errors.length > 0) {
         errorMessage.textContent = errors.join(' ');
-        errorMessage.classList.add('form__error--visible')
+        errorMessage.classList.add('comments__error--visible')
         return;
     }
 
     // Le formulaire est valide : on efface une éventuelle erreur précédente
     errorMessage.textContent = '';
-    errorMessage.classList.remove('form__error--visible');
+    errorMessage.classList.remove('comments__error--visible');
 
     addComment(nameValue, commentValue);
 
@@ -40,20 +40,20 @@ form.addEventListener('submit', function (event) {
 
 // Création et ajout d'un commentaire
 function addComment(author, text) {
-    const commentItem = document.createElement('div');
-    commentItem.classList.add('comment__item');
+    const commentItem = document.createElement('li');
+    commentItem.classList.add('comments__item');
 
     const authorElement = document.createElement('h4');
-    authorElement.classList.add('comment__author');
+    authorElement.classList.add('comments__author');
     authorElement.textContent = author;
 
     const textElement = document.createElement('p');
-    textElement.classList.add('comment__text');
+    textElement.classList.add('comments__text');
     textElement.textContent = text;
 
     const deleteButton = document.createElement('button');
     deleteButton.type = 'button';
-    deleteButton.classList.add('comment__delete');
+    deleteButton.classList.add('comments__delete');
     deleteButton.textContent = '🗑️ Supprimer';
 
     // Suppression du commentaire sans recharger la page
