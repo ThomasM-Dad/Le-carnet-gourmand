@@ -23,11 +23,25 @@ header {
     padding: 12px 16px;
     border-bottom: 1px solid #e5e7eb;
     margin: 0 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
-header div {
-    display: flex;
+.header__titles {
     flex-direction: column;
+}
+
+.header__logo {
+    background-color: #fafafa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+}
+
+.header__logo img {
+    width: 32px;
 }
 
 h1 {
@@ -48,6 +62,7 @@ main {
     padding: 14px;
 }
 
+.header__logo,
 .container,
 .container__recipe,
 .comments,
